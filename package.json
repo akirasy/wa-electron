@@ -1,0 +1,32 @@
+{
+  "name": "whatsapp-electron",
+  "version": "1.0.0",
+  "description": "WhatsApp Web Electron wrapper",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build:dir": "electron-builder --dir",
+    "build:image": "electron-builder --linux AppImage",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "build": {
+    "appId": "tea.akirasy.whatsappelectron",
+    "productName": "whatsapp-electron",
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "category": "Network",
+      "icon": "build/icon.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^45.2.2",
+    "electron-builder": "^26.18.0"
+  }
+}

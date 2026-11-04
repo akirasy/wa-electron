@@ -6,8 +6,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -23,10 +25,6 @@ jobs:
         run: npm ci
 
       - name: Build AppImage
-        run: npm run build:image
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: whatsapp-electron-appimage
-          path: dist/*.AppImage
+        run: npx electron-builder --linux AppImage --publish always
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

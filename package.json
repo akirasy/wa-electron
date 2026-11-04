@@ -1,6 +1,10 @@
 {
   "name": "whatsapp-electron",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akirasy/whatsapp-electron.git"
+  },
   "description": "WhatsApp Web Electron wrapper",
   "main": "index.js",
   "scripts": {

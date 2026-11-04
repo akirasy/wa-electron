@@ -17,8 +17,8 @@ Make sure you have **Node.js** installed on your system.
 1. Clone the repository:
 
 ```
-git clone https://github.com/akirasy/whatsapp-electron.git
-cd whatsapp-electron
+git clone https://github.com/akirasy/wa-electron.git
+cd wa-electron
 ```
 
 2. Install dependencies:
